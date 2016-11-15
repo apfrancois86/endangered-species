@@ -7,6 +7,49 @@
       margin: 0px;
 }
 
+body {
+    background: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+}
+#masthead {
+  height: 150px;
+  width: 100%;
+  /*height: 150px;*/
+  margin : 0;
+  padding: 0;
+  /*text-align: center;*/
+  top: 10px;
+  margin-bottom: 50px;
+  border: 5px solid blue;
+  position: relative;
+  /*background-color: white;*/
+  /*background-image: url("../img/ocean.jpeg"),url("../img/desert.jpg"), url("../img/mountain.jpeg"),url("../img/jungle.jpeg");
+  /*background-image: url("../img/ocean.jpeg");*/
+  /*background: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));*/
+
+  /*background-image: url("../img/jungle.jpeg"), -webkit-gradient(to right, 0 0, 0 100%, from(#FFF), to(#000));*/
+/*background-image: url("../img/jungle.jpeg"), -moz-linear-gradient(#FFF, #000);
+background-size: 10px 100px, 5px 5px;
+-o-background-size: 10px 100px;
+-moz-background-size: 10px 100px, 5px, 5px;
+-webkit-background-size: 10px 100px, 5px 5px;*/
+}
+
+.mastImage {
+  height: 150px;
+  width: 25.15%;
+}
+
+#ocean, #jungle {
+  margin-left: -4px;
+}
+
+#desert, #ocean, #jungle, {
+  margin-right: -4px;
+}
+#mtn {
+  margin-left: -12px;
+  margin-right: -8px;
+}
  #map {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -21,16 +64,6 @@
   position: relative;
   height: 100%;
   width: 100%;
-}
-
-#masthead {
-  width: 100%;
-  text-align: center;
-  top: 10px;
-  margin-bottom: 50px;
-  border: 5px solid blue;
-  background-color: white;
-  /*border-radius: 10%*/
 }
 
 .animal {
@@ -49,7 +82,7 @@
   content: "Bald Uakari, Cacajao calvus, unknown";
   position: absolute;
   top: 15%;
-  left:13%;
+  left:13desert%;
   z-index: 10;
   color: #FFF
 }
