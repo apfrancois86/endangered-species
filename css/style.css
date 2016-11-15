@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0px;
+}
+
+ #map {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#mapImage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+#masthead {
+  width: 100%;
+  text-align: center;
+  top: 10px;
+  margin-bottom: 50px;
+  border: 5px solid blue;
+  background-color: white;
+  /*border-radius: 10%*/
+}
+
+.animal {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+}
+
+#bald {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+}
+
+#bald:hover:after {
+  content: "Bald Uakari, Cacajao calvus, unknown";
+  position: absolute;
+  top: 15%;
+  left:13%;
+  z-index: 10;
+  color: #FFF
+}
+
+#dhole {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+}
+
+#dhole:hover:after {
+  content: "Dhole, Cuon alpinus, 2500";
+  position: absolute;
+  top: 22%;
+  left:11%;
+  z-index: 10;
+  color: #FFF
+}
+
+#dugong {
+  position: absolute;
+  top: 55%;
+  left: 70%;
+}
+
+#dugong:hover:after {
+  content: "Dugong, Dugong dugon, unknown";
+  position: absolute;
+  top: 10%;
+  left:20%;
+  z-index: 10;
+  color: #FFF
+}
+
+#forklemur {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+}
+
+#forklemur:hover:after {
+  content: "Fork-Crowned Lemur, Phaner furcifer, 100";
+  position: absolute;
+  top: 15%;
+  left:10%;
+  z-index: 10;
+  color: #FFF;
+  width: 100%;
+}
+#fossa {
+  position: absolute;
+  top: 65%;
+  left: 55%;
+}
+#fossa:hover:after {
+  content: "Fossa, Cryptoprocta ferox, unknown";
+  position: absolute;
+  top: 10%;
+  left:10%;
+  z-index: 10;
+  color: #FFF
+}
+
+#scarybat {
+  position: absolute;
+  top: 40%;
+  left: 70%;
+}
+
+#scarybat:hover:after {
+  content: "Bumblebee Bat, Craseonycteris thonglongyai, 200-2000";
+  position: absolute;
+  top: 10%;
+  left:10%;
+  z-index: 10;
+  color: #FFF
+}
+
+#scaryrabbit {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+}
+
+#scaryrabbit:hover:after {
+  content: "Ryukyu Rabbit, Pentalagus furnessi, unknown";
+  position: absolute;
+  top: 10%;
+  left:20%;
+  z-index: 10;
+  color: #FFF
+}
+
+#seal {
+  position: absolute;
+  top: 17%;
+  left: 40%;
+}
+
+#seal:hover:after {
+  content: "Mediterranean Monk Seal, Monachus monachus, 3";
+  position: absolute;
+  top: 10%;
+  left:10%;
+  z-index: 10;
+  color: #FFF
+}
+
+#snow {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+}
+
+#snow:hover:after {
+  content: "Snow Leapord, Uncia uncia, 6000";
+  position: absolute;
+  top: 10%;
+  left:15%;
+  z-index: 10;
+  color: #FFF
+}
+
+#wilddogs {
+  position: absolute;
+  top: 40%;
+  left: 52%;
+}
+
+#wilddogs:hover:after {
+  content: "African Wild Dog, Lycaon pictus, unknown";
+  position: absolute;
+  top: 10%;
+  left:10%;
+  z-index: 10;
+  color: #FFF
+}
