@@ -5,11 +5,15 @@
     -moz-box-sizing: border-box;
       box-sizing: border-box;
       margin: 0px;
+      font-family: 'Proza Libre', sans-serif;
 }
 
 body {
-    background: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+  background: #6A9113; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #6A9113 , #141517); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #6A9113 , #141517); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 #masthead {
   height: 150px;
   width: 100%;
@@ -20,17 +24,6 @@ body {
   top: 0;
   margin-bottom: 0;
   position: relative;
-  /*background-color: white;*/
-  /*background-image: url("../img/ocean.jpeg"),url("../img/desert.jpg"), url("../img/mountain.jpeg"),url("../img/jungle.jpeg");
-  /*background-image: url("../img/ocean.jpeg");*/
-  /*background: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));*/
-
-  /*background-image: url("../img/jungle.jpeg"), -webkit-gradient(to right, 0 0, 0 100%, from(#FFF), to(#000));*/
-/*background-image: url("../img/jungle.jpeg"), -moz-linear-gradient(#FFF, #000);
-background-size: 10px 100px, 5px 5px;
--o-background-size: 10px 100px;
--moz-background-size: 10px 100px, 5px, 5px;
--webkit-background-size: 10px 100px, 5px 5px;*/
 }
 
 .mastImage {
@@ -56,8 +49,9 @@ background-size: 10px 100px, 5px 5px;
   z-index: 10;
   top: 28%;
   left: 42%;
-  color: #8a909b;
+  color: darkblue;
   font-size: 2.0em;
+  text-shadow: 5px 5px 30px white;
 }
 
  #map {
@@ -77,8 +71,8 @@ background-size: 10px 100px, 5px 5px;
 }
 
 .animal {
-  width: 100px;
-  height: 100px;
+  width: 65px;
+  height: 65px;
   border-radius: 100%;
 }
 
@@ -88,13 +82,43 @@ background-size: 10px 100px, 5px 5px;
   left: 30%;
 }
 
-#bald:hover:after {
-  content: "Bald Uakari, Cacajao calvus, unknown";
+#baldStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 15%;
-  left:13desert%;
+  left:-50%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
+}
+
+#bald:hover > #baldStats {
+  display: block;
+}
+#bald:active, #dhole:active, #dugong:active, #forklemur:active, #fossa:active, #scarybat:active, #scaryrabbit:active, #seal:active, #snow:active, #wilddogs:active  {
+  filter: invert(100%);
+}
+
+#bald:active > #baldPic, #dhole:active > #dholePic, #dugong:active > #dugongPic, #forklemur:active > #forklemurPic, #fossa:active > #fossaPic, #scarybat:active > #scarybatPic, #scaryrabbit:active > #scaryrabbitPic, #seal:active > #sealPic, #snow:active > #snowPic, #wilddogs:active > #wilddogsPic {
+  display: block;
+}
+
+#baldPic, #dholePic, #dugongPic, #forklemurPic, #fossaPic, #scarybatPic, #scaryrabbitPic, #sealPic, #snowPic, #wilddogsPic {
+  display: none;
+  position: fixed;
+  top: 70%;
+  right: 40%;
+}
+.bigPic {
+  height: 250px;
+  width: 300px;
+}
+.bigger {
+  text-decoration: underline;
+  font-size: 1.2em;
 }
 
 #dhole {
@@ -103,130 +127,196 @@ background-size: 10px 100px, 5px 5px;
   left: 45%;
 }
 
-#dhole:hover:after {
-  content: "Dhole, Cuon alpinus, 2500";
-  position: absolute;
-  top: 22%;
-  left:11%;
-  z-index: 10;
-  color: #FFF
+#dhole h4::first-line {
+  color: red;
 }
 
+#dholeStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
+  position: absolute;
+  left:-180%;
+  z-index: 10;
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
+}
+
+#dhole:hover > #dholeStats {
+  display: block;
+}
 #dugong {
   position: absolute;
   top: 55%;
   left: 70%;
 }
-
-#dugong:hover:after {
-  content: "Dugong, Dugong dugon, unknown";
+#dugongStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:20%;
+  left:-50%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
 }
 
+#dugong:hover > #dugongStats {
+  display: block;
+}
 #forklemur {
   position: absolute;
   top: 50%;
   left: 60%;
 }
-
-#forklemur:hover:after {
-  content: "Fork-Crowned Lemur, Phaner furcifer, 100";
+#lemurStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 15%;
-  left:10%;
+  top:-220%;
+  left: -60%;
   z-index: 10;
-  color: #FFF;
-  width: 100%;
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
+}
+
+#forklemur:hover > #lemurStats {
+  display: block;
 }
 #fossa {
   position: absolute;
   top: 65%;
   left: 55%;
 }
-#fossa:hover:after {
-  content: "Fossa, Cryptoprocta ferox, unknown";
+#fossaStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:10%;
+  left:-50%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
 }
 
+#fossa:hover > #fossaStats {
+  display: block;
+}
 #scarybat {
   position: absolute;
   top: 40%;
   left: 70%;
 }
-
-#scarybat:hover:after {
-  content: "Bumblebee Bat, Craseonycteris thonglongyai, 200-2000";
+#scarybatStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:10%;
+  right:-280%;
+  top: 5%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
 }
 
+#scarybat:hover > #scarybatStats {
+  display: block;
+}
 #scaryrabbit {
   position: absolute;
   top: 20%;
   left: 80%;
 }
-
-#scaryrabbit:hover:after {
-  content: "Ryukyu Rabbit, Pentalagus furnessi, unknown";
+#scaryrabbitStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:20%;
+  left:-50%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
 }
 
+#scaryrabbit:hover > #scaryrabbitStats {
+  display: block;
+}
 #seal {
   position: absolute;
   top: 17%;
   left: 40%;
 }
-
-#seal:hover:after {
-  content: "Mediterranean Monk Seal, Monachus monachus, 3";
+#sealStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:10%;
+  left:-275%;
+  top: 15%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
 }
 
+#seal:hover > #sealStats {
+  display: block;
+}
 #snow {
   position: absolute;
   top: 20%;
   left: 70%;
 }
 
-#snow:hover:after {
-  content: "Snow Leapord, Uncia uncia, 6000";
+#snowStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:15%;
+  left:-280%;
+  top: -100%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
 }
 
+#snow:hover > #snowStats {
+  display: block;
+}
 #wilddogs {
   position: absolute;
   top: 40%;
   left: 52%;
 }
-
-#wilddogs:hover:after {
-  content: "African Wild Dog, Lycaon pictus, unknown";
+#wilddogsStats {
+  display:none;
+  border: 2px solid black;
+  background-color: #d3c689;
+  opacity: 0.7;
   position: absolute;
-  top: 10%;
-  left:10%;
+  left:-260%;
   z-index: 10;
-  color: #FFF
+  width: 260%;
+  text-align: center;
+  box-shadow: 5px 5px 10px #606060;
+}
+
+#wilddogs:hover > #wilddogsStats {
+  display: block;
 }
