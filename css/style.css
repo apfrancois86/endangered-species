@@ -8,11 +8,11 @@
       font-family: 'Proza Libre', sans-serif;
 }
 
-body {
-  background: #6A9113; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #6A9113 , #141517); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #6A9113 , #141517); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+/*body {
+  background: #6A9113;
+  background: -webkit-linear-gradient(to left, #6A9113 , #141517);
+  background: linear-gradient(to left, #6A9113 , #141517);
+}*/
 
 #masthead {
   height: 150px;
@@ -45,10 +45,11 @@ body {
 }
 
 #mastText {
-  position: absolute;
+  position: fixed;
   z-index: 10;
-  top: 28%;
-  left: 42%;
+  top: 3%;
+  left: 40%;
+  text-align: center;
   color: darkblue;
   font-size: 2.0em;
   text-shadow: 5px 5px 30px white;
@@ -319,4 +320,28 @@ body {
 
 #wilddogs:hover > #wilddogsStats {
   display: block;
+}
+
+.button {
+  position: relative;
+  box-shadow: 0 0 0 2px rgb(142, 142, 142), 0 0 0 6px rgb(167, 167, 167), 0 0 0 7px rgb(193, 193, 193), 0 0 0 11px rgb(203, 203, 203), 0 0 0 13px rgb(255, 255, 255), 0 0 0 15px rgb(102, 102, 102), 0 0 0 16px rgb(230, 230, 230), 0 0 0 17px rgb(240, 240, 240), 0 0 0 18px rgb(255, 255, 255);
+  border-radius: 11px;
+  background: linear-gradient(rgb(219, 219, 219), rgb(173, 173, 173));
+  text-decoration: none;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: bolder;
+  font-family: 'Biryani', sans-serif;
+  text-transform: uppercase;
+  color: rgb(85, 85, 85);
+  position: fixed;
+  top: 850px;
+  left: 150px;
+}
+
+.button::after, .button::before {
+  content: "\2605";
+  opacity: 0.6;
+  padding: 10px;
+  /*text-shadow: 0 0 0 10px rgb(169,192, 209), 0 0 0 5px rgb(220, 224, 222);*/
 }
